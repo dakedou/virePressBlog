@@ -1,3 +1,6 @@
-### 我是生活-首页
+<!-- 自定义组件 -->
+<script setup>
+import photo from './photo/index.vue';
+</script>
 
-是否是的方式方式方式士大夫师傅是
+<photo />
