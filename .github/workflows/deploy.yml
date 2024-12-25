@@ -27,22 +27,22 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'pnpm'
+          cache: 'npm'
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+      - name: Setup npm
+        uses: npm/action-setup@v3  # 使用最新版本
         with:
-          version: 8.14.0  # 确保在这里指定 pnpm 的版本
+          version: 8.14.0
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Build with VitePress
         run: |
-          pnpm run docs:build
+          npm run docs:build
           touch dakedou.git.io/.vitepress/dist/.nojekyll
 
       - name: Upload artifact
