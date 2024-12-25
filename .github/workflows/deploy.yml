@@ -43,12 +43,12 @@ jobs:
       - name: Build with VitePress
         run: |
           npm run docs:build
-          touch dakedou.git.io/.vitepress/dist/.nojekyll
+          touch .vitepress/dist/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: dakedou.git.io/.vitepress/dist
+          path: .vitepress/dist
 
   deploy:
     environment:
